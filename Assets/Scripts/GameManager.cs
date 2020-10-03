@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (!questionsAnswered[currentQuestionIndex] && currentQuestionIndex < AllQuestions.Length) {
+        if (currentQuestionIndex < AllQuestions.Length) {
             var currentQuestion = AllQuestions[currentQuestionIndex];
             if (!currentTextAlreadyFilled) {
                 QuestionText.text = currentQuestion.Question;
@@ -38,9 +38,18 @@ public class GameManager : MonoBehaviour {
 
         if(currentQuestion.Failure) {            
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }        
+
+        if(currentQuestion.Success) {
+            // TODO: Go to winning scene
         }
 
-        questionsAnswered[currentQuestionIndex] = true;
+        ChangeQuestion(currentQuestion.Answers[answerId].NextQuestionId);
+    }
+
+    private void ChangeQuestion(int goToQuestionId) {
+        currentTextAlreadyFilled = false;
+        currentQuestionIndex = goToQuestionId;
     }
 
 }

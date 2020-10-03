@@ -6,15 +6,15 @@
             "Answers": [
                 {
                     "Label" : "Première réponse",
-                    "NextQuestionId": -1
+                    "NextQuestionId": 1
                 },
                 {
                     "Label": "Deuxième réponse",
-                    "NextQuestionId": 2
+                    "NextQuestionId": 1
                 },
                 {
                     "Label": "Troisième réponse",
-                    "NextQuestionId": 2
+                    "NextQuestionId": 1
                 }                                
             ],            
             "Failure": false,
@@ -25,16 +25,34 @@
             "Question": "Coucou la deuxième question",
             "Answers": [
                 {
-                    "Label" : "Première réponse",
-                    "NextQuestionId": -1
-                },
-                {
-                    "Label": "Deuxième réponse",
+                    "Label" : "Première réponse 2",
                     "NextQuestionId": 2
                 },
                 {
-                    "Label": "Troisième réponse",
+                    "Label": "Deuxième réponse 2",
                     "NextQuestionId": 2
+                },
+                {
+                    "Label": "Troisième réponse 2",
+                    "NextQuestionId": 2
+                }                                
+            ]     
+        },
+        {            
+            "Id": 2,
+            "Question": "Coucou la troisieme question",
+            "Answers": [
+                {
+                    "Label" : "Première réponse 3",
+                    "NextQuestionId": 0
+                },
+                {
+                    "Label": "Deuxième réponse 3",
+                    "NextQuestionId": 1
+                },
+                {
+                    "Label": "Troisième réponse 3",
+                    "NextQuestionId": 1
                 }                                
             ],               
             "Failure": false,
