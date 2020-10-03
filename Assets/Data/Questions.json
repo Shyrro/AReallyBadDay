@@ -1,0 +1,44 @@
+{
+    "Questions": [
+        {      
+            "Id": 0,
+            "Question": "Coucou la question",
+            "Answers": [
+                {
+                    "Label" : "Première réponse",
+                    "NextQuestionId": -1
+                },
+                {
+                    "Label": "Deuxième réponse",
+                    "NextQuestionId": 2
+                },
+                {
+                    "Label": "Troisième réponse",
+                    "NextQuestionId": 2
+                }                                
+            ],            
+            "Failure": false,
+            "Success": false
+        },
+        {            
+            "Id": 1,
+            "Question": "Coucou la deuxième question",
+            "Answers": [
+                {
+                    "Label" : "Première réponse",
+                    "NextQuestionId": -1
+                },
+                {
+                    "Label": "Deuxième réponse",
+                    "NextQuestionId": 2
+                },
+                {
+                    "Label": "Troisième réponse",
+                    "NextQuestionId": 2
+                }                                
+            ],               
+            "Failure": false,
+            "Success": false      
+        }
+    ]
+}
