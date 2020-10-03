@@ -29,19 +29,27 @@ public class GameManager : MonoBehaviour {
         var currentQuestion = AllQuestions[currentQuestionIndex];
 
         if(currentQuestion.Failure) {            
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);  
+            Replay();
             return;          
         }        
 
-        if(currentQuestion.Success) {
-            // TODO: Go to winning scene
+        if(currentQuestion.Success) {            
+            SceneHelper.GoToSuccessScene();
+            return;
         }
 
         ChangeQuestion(currentQuestion.Answers[answerId].NextQuestionId);
     }
 
+    public void Replay(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);  
+    }
+
     private void ChangeQuestion(int goToQuestionId) {
         currentTextAlreadyFilled = false;
+        for (var i = 0; i < AnswerButtons.Count; i++) {            
+            AnswerButtons[i].gameObject.SetActive(false);
+        }
         currentQuestionIndex = goToQuestionId;
     }
 
