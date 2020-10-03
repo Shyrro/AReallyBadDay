@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
     private Statement[] AllQuestions;
     public int currentQuestionIndex = 0;
     private bool currentTextAlreadyFilled;
+    public AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start() {
@@ -37,7 +38,7 @@ public class GameManager : MonoBehaviour {
             SceneHelper.GoToSuccessScene();
             return;
         }
-
+        audioManager.Play("buttonClick");
         ChangeQuestion(currentQuestion.Answers[answerId].NextQuestionId);
     }
 
@@ -69,5 +70,4 @@ public class GameManager : MonoBehaviour {
             }
         }
     }
-
 }
