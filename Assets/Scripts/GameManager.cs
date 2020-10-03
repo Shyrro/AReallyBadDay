@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Linq;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +16,8 @@ public class GameManager : MonoBehaviour {
     private bool currentTextAlreadyFilled;
     public AudioManager audioManager;
 
+    private Statement CurrentQuestion => AllQuestions.First(x => x.Id == currentQuestionIndex);
+
     // Start is called before the first frame update
     void Start() {
         Statements fileData = JsonUtility.FromJson<Statements>(QuestionsFile.text);
@@ -27,19 +30,18 @@ public class GameManager : MonoBehaviour {
     }
 
     public void AnswerQuestion(int answerId) {
-        var currentQuestion = AllQuestions[currentQuestionIndex];
-
-        if(currentQuestion.Failure) {            
+        if(CurrentQuestion.Failure) {            
             Replay();
             return;          
         }        
 
-        if(currentQuestion.Success) {            
+        if(CurrentQuestion.Success) {            
             SceneHelper.GoToSuccessScene();
             return;
         }
+
         audioManager.Play("buttonClick");
-        ChangeQuestion(currentQuestion.Answers[answerId].NextQuestionId);
+        ChangeQuestion(CurrentQuestion.Answers[answerId].NextQuestionId);
     }
 
     public void Replay(){
@@ -55,19 +57,19 @@ public class GameManager : MonoBehaviour {
     }
 
     private void FillUITexts() {
-        if (currentQuestionIndex < AllQuestions.Length) {
-            var currentQuestion = AllQuestions[currentQuestionIndex];
-            if (!currentTextAlreadyFilled) {
-                QuestionText.text = currentQuestion.Question;
-                for (var i = 0; i < currentQuestion.Answers.Length; i++) {
-                    ButtonTexts[i].text = currentQuestion.Answers[i].Label;
-                    AnswerButtons[i].gameObject.SetActive(true);
-                }
-                
-                Sprite background = Resources.Load<Sprite>(currentQuestion.Image);                        
-                BackgroundImage.sprite = background;                
-                currentTextAlreadyFilled = true;
+        if (!currentTextAlreadyFilled) {
+            QuestionText.text = CurrentQuestion.Question;
+            for (var i = 0; i < CurrentQuestion.Answers.Length; i++) {
+                ButtonTexts[i].text = CurrentQuestion.Answers[i].Label;
+                AnswerButtons[i].gameObject.SetActive(true);
             }
+            
+            if (!string.IsNullOrEmpty(CurrentQuestion.Image)) {
+                Sprite background = Resources.Load<Sprite>(CurrentQuestion.Image);                        
+                BackgroundImage.sprite = background;                
+            }
+
+            currentTextAlreadyFilled = true;
         }
     }
 }
