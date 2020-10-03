@@ -5,4 +5,5 @@ public class Statement {
     public Answer[] Answers;
     public bool Failure;
     public bool Success;
+    public string Image;
 }
