@@ -1719,7 +1719,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: AmbianceMusic
     clip: {fileID: 8300000, guid: d9e7ee4fc94b25743ab0565c53149031, type: 3}
-    volume: 1
+    volume: 0.306
     pitch: 1
     loop: 1
     source: {fileID: 0}

@@ -37,7 +37,7 @@
         },
         {
             "Id": 1,
-            "Question": "Le réveille se met à sonner.",
+            "Question": "Le réveil se met à sonner.",
             "Answers": [
                 {
                     "Label": "Le réveil ? Encore 5 min...",
@@ -311,7 +311,7 @@
                     "NextQuestionId": 17
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/dodo"
         },
         {
             "Id": 17,
@@ -414,7 +414,7 @@
                     "NextQuestionId": 24
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/embouteillage"
         },
         {
             "Id": 24,
@@ -458,7 +458,7 @@
                     "NextQuestionId": 23
                 }
             ],
-            "Image": "Sprites/Backgrounds/embouteillage"
+            "Image": ""
         },
         {
             "Id": 4,
@@ -480,7 +480,7 @@
                     "NextQuestionId": 6
                 }
             ],
-            "Image": "Sprites/Backgrounds/embouteillage"
+            "Image": ""
         },
         {
             "Id": 6,
@@ -491,7 +491,7 @@
                     "NextQuestionId": 7
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/coffee"
         },
         {
             "Id": 7,
@@ -524,7 +524,7 @@
                     "NextQuestionId": 10
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/office"
         },
         {
             "Id": 10,

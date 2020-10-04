@@ -70,8 +70,11 @@ public class GameManager : MonoBehaviour {
                 AnswerButtons[i].gameObject.SetActive(true);
             }
 
-            if (!string.IsNullOrEmpty(CurrentQuestion.Image)) {
+            if (!string.IsNullOrWhiteSpace(CurrentQuestion.Image)) {
                 Sprite background = Resources.Load<Sprite>(CurrentQuestion.Image);
+                BackgroundImage.sprite = background;
+            }else {
+                Sprite background = Resources.Load<Sprite>("Sprites/Backgrounds/black");
                 BackgroundImage.sprite = background;
             }
 
