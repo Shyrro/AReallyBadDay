@@ -18,11 +18,14 @@ public class GameManager : MonoBehaviour {
 
     private Statement CurrentQuestion => AllQuestions.First(x => x.Id == currentQuestionIndex);
 
-    // Start is called before the first frame update
-    void Start() {
-        Statements fileData = JsonUtility.FromJson<Statements>(QuestionsFile.text);
-        AllQuestions = fileData.Questions;
+    private void Awake() {
         audioManager = FindObjectOfType<AudioManager>();
+        audioManager.Play("AmbianceMusic");
+    }
+    // Start is called before the first frame update
+    void Start() {        
+        Statements fileData = JsonUtility.FromJson<Statements>(QuestionsFile.text);
+        AllQuestions = fileData.Questions;        
         HideButtons();
     }
 
@@ -32,17 +35,17 @@ public class GameManager : MonoBehaviour {
     }
 
     public void AnswerQuestion(int answerId) {
+        audioManager.Play("buttonClick");
         if (CurrentQuestion.Failure) {
             Replay();
             return;
         }
 
         if (CurrentQuestion.Success) {
-            SceneHelper.GoToSuccessScene();
+            SceneHelper.GoToMainScene();
             return;
         }
-
-        audioManager.Play("buttonClick");
+        
         ChangeQuestion(CurrentQuestion.Answers[answerId].NextQuestionId);
     }
 
