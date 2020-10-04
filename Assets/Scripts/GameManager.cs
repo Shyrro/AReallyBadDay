@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
     private Statement[] AllQuestions;
     public int currentQuestionIndex = 0;
     private bool currentTextAlreadyFilled;
-    public AudioManager audioManager;
+    private AudioManager audioManager;
 
     private Statement CurrentQuestion => AllQuestions.First(x => x.Id == currentQuestionIndex);
 
@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
     void Start() {
         Statements fileData = JsonUtility.FromJson<Statements>(QuestionsFile.text);
         AllQuestions = fileData.Questions;
+        audioManager = FindObjectOfType<AudioManager>();
         HideButtons();
     }
 

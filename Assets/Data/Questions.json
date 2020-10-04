@@ -180,7 +180,7 @@
                     "NextQuestionId": 5
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/office"
         },
         {
             "Id": 5,
@@ -191,7 +191,7 @@
                     "NextQuestionId": 6
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/embouteillage"
         },
         {
             "Id": 6,
