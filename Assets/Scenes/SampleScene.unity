@@ -972,8 +972,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.3336, y: 31.1}
-  m_SizeDelta: {x: 1059.4977, y: 79.79222}
+  m_AnchoredPosition: {x: 3.8605, y: 27.751}
+  m_SizeDelta: {x: 1272.2838, y: 86.489624}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1222901491
 MonoBehaviour:
@@ -1206,7 +1206,6 @@ MonoBehaviour:
   - {fileID: 806205721}
   BackgroundImage: {fileID: 592102427}
   currentQuestionIndex: 0
-  audioManager: {fileID: 2121907019}
 --- !u!1 &1583571278
 GameObject:
   m_ObjectHideFlags: 0

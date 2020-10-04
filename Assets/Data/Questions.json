@@ -52,7 +52,7 @@
                     "NextQuestionId": 28
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/reveil"
         },
         {
             "Id": 28,
@@ -85,7 +85,7 @@
                     "NextQuestionId": 31
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/office"
         },
         {
             "Id": 31,
@@ -96,7 +96,7 @@
                     "NextQuestionId": 32
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/coffee"
         },
         {
             "Id": 32,
@@ -107,7 +107,7 @@
                     "NextQuestionId": 33
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/office"
         },
         {
             "Id": 33,
