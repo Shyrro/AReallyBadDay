@@ -29,7 +29,7 @@
             "Question": "L'aube se lève. Un affreux cauchemar est survenu...",
             "Answers": [
                 {
-                    "Label" : "Suivant",
+                    "Label": "Suivant",
                     "NextQuestionId": 1
                 }
             ],
@@ -44,11 +44,103 @@
                     "NextQuestionId": 15
                 },
                 {
-                    "Label" : "Prendre son temps",
+                    "Label": "Prendre son temps",
                     "NextQuestionId": 2
+                },
+                {
+                    "Label": "Se lever directement !",
+                    "NextQuestionId": 28
                 }
             ],
-            "Image": "Sprites/Backgrounds/reveil"
+            "Image": ""
+        },
+        {
+            "Id": 28,
+            "Question": "Je me sens motivé et en forme aujourd'hui !",
+            "Answers": [
+                {
+                    "Label": "Suivant",
+                    "NextQuestionId": 29
+                }
+            ],
+            "Image": ""
+        },
+        {
+            "Id": 29,
+            "Question": "Je pars pour le taff, personne sur la route.",
+            "Answers": [
+                {
+                    "Label": "Suivant",
+                    "NextQuestionId": 30
+                }
+            ],
+            "Image": ""
+        },
+        {
+            "Id": 30,
+            "Question": "Arrivé au boulot, personne dans les locaux.",
+            "Answers": [
+                {
+                    "Label": "P'tit café ?",
+                    "NextQuestionId": 31
+                }
+            ],
+            "Image": ""
+        },
+        {
+            "Id": 31,
+            "Question": "Je démarre la machine a café. Je commence à boire ma tasse.",
+            "Answers": [
+                {
+                    "Label": "Suivant",
+                    "NextQuestionId": 32
+                }
+            ],
+            "Image": ""
+        },
+        {
+            "Id": 32,
+            "Question": "Il n'y a toujours personne dans les locaux. L'heure est pourtant bien avancée. Suis-je le seul motivé ?",
+            "Answers": [
+                {
+                    "Label": "Suivant",
+                    "NextQuestionId": 33
+                }
+            ],
+            "Image": ""
+        },
+        {
+            "Id": 33,
+            "Question": "J'entends un petit bruit derrière moi.",
+            "Answers": [
+                {
+                    "Label": "Se retourner",
+                    "NextQuestionId": 34
+                }
+            ],
+            "Image": ""
+        },
+        {
+            "Id": 34,
+            "Question": "La machine a café génère un bruit soudain et des étincelles ! Je tente de réparer à la va-vite !!",
+            "Answers": [
+                {
+                    "Label": "Tu es un héros des bureaux",
+                    "NextQuestionId": 35
+                }
+            ],
+            "Image": ""
+        },
+        {
+            "Id": 35,
+            "Question": "Sauf que j'ai oublié que je ne sais pas manipuler l'électricité...",
+            "Answers": [
+                {
+                    "Label": "Ah...",
+                    "NextQuestionId": -1
+                }
+            ],
+            "Image": ""
         },
         {
             "Id": 15,
@@ -140,7 +232,7 @@
         },
         {
             "Id": 23,
-            "Question": "Un sac de sable tombe sur la voiture... C'est vraiment pas de chance...",
+            "Question": "Un énorme sac de ciment tombe sur la voiture... C'est vraiment pas de chance...",
             "Answers": [
                 {
                     "Label": "Suivant",
@@ -154,7 +246,7 @@
             "Question": "Je sors de la maison, et je prends la route",
             "Answers": [
                 {
-                    "Label" : "Suivant",
+                    "Label": "Suivant",
                     "NextQuestionId": 3
                 }
             ],
@@ -165,8 +257,56 @@
             "Question": "L'embouteillage ce matin est très important",
             "Answers": [
                 {
-                    "Label" : "Rester dans les bouchons",
+                    "Label": "Rester dans les bouchons",
                     "NextQuestionId": 4
+                },
+                {
+                    "Label": "Bifurquer à une sortie, ça peut aller plus vite",
+                    "NextQuestionId": 24
+                }
+            ],
+            "Image": ""
+        },
+        {
+            "Id": 24,
+            "Question": "Je me retrouve dans des rues désertes, aucune trace de l'embouteillage.",
+            "Answers": [
+                {
+                    "Label": "Suivant",
+                    "NextQuestionId": 25
+                }
+            ],
+            "Image": ""
+        },
+        {
+            "Id": 25,
+            "Question": "Je passe proche du chantier d'une maison. Une vieille maison en plein travaux de rénovation.",
+            "Answers": [
+                {
+                    "Label": "Je regarde un peu les travaux en cours.",
+                    "NextQuestionId": 26
+                }
+            ],
+            "Image": ""
+        },
+        {
+            "Id": 26,
+            "Question": "L'installation en place est quand même incroyable. Les gars bossent avec acharnement. Même s'ils ont l'air un peu mous, je trouve.",
+            "Answers": [
+                {
+                    "Label": "Suivant",
+                    "NextQuestionId": 27
+                }
+            ],
+            "Image": ""
+        },
+        {
+            "Id": 27,
+            "Question": "Je devrais peut-être partir, ça fait un moment que je suis là, je devrai y aller maintenant ou je v...",
+            "Answers": [
+                {
+                    "Label": "Suivant",
+                    "NextQuestionId": 23
                 }
             ],
             "Image": "Sprites/Backgrounds/embouteillage"
@@ -176,7 +316,7 @@
             "Question": "J'arrive enfin au travail, mais je suis en retard.",
             "Answers": [
                 {
-                    "Label" : "Suivant",
+                    "Label": "Suivant",
                     "NextQuestionId": 5
                 }
             ],
@@ -187,7 +327,7 @@
             "Question": "Le dossier du client Naite est sur mon bureau",
             "Answers": [
                 {
-                    "Label" : "Ne pas s'en occuper, ça attendra",
+                    "Label": "Ne pas s'en occuper, ça attendra",
                     "NextQuestionId": 6
                 }
             ],
@@ -198,7 +338,7 @@
             "Question": "La matinée passe. \"J'ai bien envie d'un café !\"",
             "Answers": [
                 {
-                    "Label" : "Suivant",
+                    "Label": "Suivant",
                     "NextQuestionId": 7
                 }
             ],
@@ -209,7 +349,7 @@
             "Question": "La photocopieuse semble en panne suite à votre café. Vos collègues sont sur l'affaire.",
             "Answers": [
                 {
-                    "Label" : "Donner des conseils à distance",
+                    "Label": "Donner des conseils à distance",
                     "NextQuestionId": 8
                 }
             ],
@@ -220,7 +360,7 @@
             "Question": "Il est temps d'aller manger.",
             "Answers": [
                 {
-                    "Label" : "Rejoindre des amis",
+                    "Label": "Rejoindre des amis",
                     "NextQuestionId": 9
                 }
             ],
@@ -231,7 +371,7 @@
             "Question": "De retour au travail. Dans 5min j'ai une réunion de routine, sans grand intérêt...",
             "Answers": [
                 {
-                    "Label" : "Suivant",
+                    "Label": "Suivant",
                     "NextQuestionId": 10
                 }
             ],
@@ -242,18 +382,7 @@
             "Question": "Que faire durant cette réunion ?",
             "Answers": [
                 {
-                    "Label" : "Participer",
-                    "NextQuestionId": 11
-                }
-            ],
-            "Image": ""
-        },
-        {
-            "Id": 10,
-            "Question": "Que faire durant cette réunion ?",
-            "Answers": [
-                {
-                    "Label" : "Participer",
+                    "Label": "Participer",
                     "NextQuestionId": 11
                 }
             ],
@@ -264,7 +393,7 @@
             "Question": "La réunion est finie, je mets en ordre mes affaires avant de partir.",
             "Answers": [
                 {
-                    "Label" : "Suivant",
+                    "Label": "Suivant",
                     "NextQuestionId": 12
                 }
             ],
@@ -275,7 +404,7 @@
             "Question": "Je rentre comment ?",
             "Answers": [
                 {
-                    "Label" : "En bus",
+                    "Label": "En bus",
                     "NextQuestionId": 13
                 }
             ],
@@ -286,7 +415,7 @@
             "Question": "Damn, j'ai pas d'idée...",
             "Answers": [
                 {
-                    "Label" : "Suivant",
+                    "Label": "Suivant",
                     "NextQuestionId": 1000
                 }
             ],
