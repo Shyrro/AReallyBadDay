@@ -125,7 +125,7 @@
                     "NextQuestionId": 22
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/chantier"
         },
         {
             "Id": 22,
@@ -136,7 +136,7 @@
                     "NextQuestionId": 23
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/chantier"
         },
         {
             "Id": 23,
@@ -147,7 +147,7 @@
                     "NextQuestionId": -1
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/lostBag"
         },
         {
             "Id": 2,
@@ -158,7 +158,7 @@
                     "NextQuestionId": 3
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/leavingQuickly"
         },
         {
             "Id": 3,
@@ -169,7 +169,7 @@
                     "NextQuestionId": 4
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/embouteillage"
         },
         {
             "Id": 4,
