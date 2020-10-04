@@ -23,14 +23,14 @@
                     "NextQuestionId": 1
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Aube"
         },
         {
             "Id": 1,
-            "Question": "Le réveille se mets à sonner.",
+            "Question": "Le réveille se met à sonner.",
             "Answers": [
                 {
-                    "Label": "Le réveil ? Encore 5min...",
+                    "Label": "Le réveil ? Encore 5 min...",
                     "NextQuestionId": 15
                 },
                 {
@@ -42,7 +42,7 @@
         },
         {
             "Id": 15,
-            "Question": "Aller, je profite un peu et je me lève...",
+            "Question": "Allez, je profite un peu et je me lève...",
             "Answers": [
                 {
                     "Label": "Suivant",
@@ -119,7 +119,7 @@
         },
         {
             "Id": 22,
-            "Question": "J'entends un bruit au dessus de moi. Mais j'ai dis que j'avais plus le temps, je fonce !",
+            "Question": "J'entends un bruit au dessus de moi. Mais j'ai dit que j'avais plus le temps, je fonce !",
             "Answers": [
                 {
                     "Label": "Suivant",

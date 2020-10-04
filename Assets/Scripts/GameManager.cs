@@ -1,9 +1,9 @@
-﻿using System.Linq;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
     public TextAsset QuestionsFile;
@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
     void Start() {
         Statements fileData = JsonUtility.FromJson<Statements>(QuestionsFile.text);
         AllQuestions = fileData.Questions;
+        HideButtons();
     }
 
     // Update is called once per frame
@@ -30,12 +31,12 @@ public class GameManager : MonoBehaviour {
     }
 
     public void AnswerQuestion(int answerId) {
-        if(CurrentQuestion.Failure) {            
+        if (CurrentQuestion.Failure) {
             Replay();
-            return;          
-        }        
+            return;
+        }
 
-        if(CurrentQuestion.Success) {            
+        if (CurrentQuestion.Success) {
             SceneHelper.GoToSuccessScene();
             return;
         }
@@ -44,16 +45,20 @@ public class GameManager : MonoBehaviour {
         ChangeQuestion(CurrentQuestion.Answers[answerId].NextQuestionId);
     }
 
-    public void Replay(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);  
+    public void Replay() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void ChangeQuestion(int goToQuestionId) {
         currentTextAlreadyFilled = false;
-        for (var i = 0; i < AnswerButtons.Count; i++) {            
+        HideButtons();
+        currentQuestionIndex = goToQuestionId;
+    }
+
+    private void HideButtons(){
+        for (var i = 0; i < AnswerButtons.Count; i++) {
             AnswerButtons[i].gameObject.SetActive(false);
         }
-        currentQuestionIndex = goToQuestionId;
     }
 
     private void FillUITexts() {
@@ -63,10 +68,10 @@ public class GameManager : MonoBehaviour {
                 ButtonTexts[i].text = CurrentQuestion.Answers[i].Label;
                 AnswerButtons[i].gameObject.SetActive(true);
             }
-            
+
             if (!string.IsNullOrEmpty(CurrentQuestion.Image)) {
-                Sprite background = Resources.Load<Sprite>(CurrentQuestion.Image);                        
-                BackgroundImage.sprite = background;                
+                Sprite background = Resources.Load<Sprite>(CurrentQuestion.Image);
+                BackgroundImage.sprite = background;
             }
 
             currentTextAlreadyFilled = true;
