@@ -23,7 +23,7 @@
                     "NextQuestionId": 1
                 }
             ],
-            "Image": "Sprites/Aube"
+            "Image": "Sprites/Backgrounds/Aube"
         },
         {
             "Id": 1,
@@ -38,7 +38,7 @@
                     "NextQuestionId": 2
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/reveil"
         },
         {
             "Id": 15,
@@ -49,7 +49,7 @@
                     "NextQuestionId": 16
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/dodo"
         },
         {
             "Id": 16,
@@ -71,7 +71,7 @@
                     "NextQuestionId": 18
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/horloge"
         },
         {
             "Id": 18,
@@ -82,7 +82,7 @@
                     "NextQuestionId": 19
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/horloge"
         },
         {
             "Id": 19,
@@ -93,7 +93,7 @@
                     "NextQuestionId": 20
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/leavingQuickly"
         },
         {
             "Id": 20,
@@ -104,7 +104,7 @@
                     "NextQuestionId": 21
                 }
             ],
-            "Image": ""
+            "Image": "Sprites/Backgrounds/embouteillage"
         },
         {
             "Id": 21,
