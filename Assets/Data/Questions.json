@@ -3,14 +3,24 @@
         {
             "Id": -1,
             "Question": "Vous êtes mort...",
-            "Answers": [],
+            "Answers": [
+                {
+                    "Label": "Recommencer",
+                    "NextQuestionId": 0
+                }
+            ],
             "Failure": true,
             "Image": ""
         },
         {
             "Id": 1000,
             "Question": "VICTOIRE",
-            "Answers": [],
+            "Answers": [
+                {
+                    "Label": "Rejouer",
+                    "NextQuestionId": 0
+                }
+            ],
             "Success": true,
             "Image": ""
         },
