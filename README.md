@@ -12,7 +12,8 @@ Unless you do the right choices, you'll be stuck in the same day.
 The purpose was to lose the player in a lot a choices and not making a wrong choice obvious. A wrong choice can be a wrong path that continues on and on with also multiple choices. Making the player unable to know the wrong choice right away and be "Stuck in a loop" for a long time. 
 Unfortunately, making a good story with that much choices wasn't possible under 72h. 
 
-But since we liked the idea, 
+But since we liked the idea, we wanted to open it to everyone that wants to collaborate to make this game better.
+Below, we explain how the game is structured if you want to participate.
 
 # Implementation
 
