@@ -2,6 +2,7 @@
 
 This project has been made under 72h for the LudumDare 47. 
 The theme of the jam was : "Stuck in a loop".
+The LudumDare is a game jam where you have to make a game under a certain amount of time with a certain theme. More details on : ldjam.com .
 
 # Idea
 
@@ -21,7 +22,7 @@ The core of the game has been made to accept any suggestions of potentiel storie
 
 Few things you need to know : 
 
-- Questions.json : This file is under Assets/Data and represents the structure of the story. Each "Question" object in the json file represents a step that has answers, each answer has a question id that represents the next step that shows up on screen. It is structured as follows : 
+- **Questions.json** : This file is under Assets/Data and represents the structure of the story. Each "Question" object in the json file represents a step that has answers, each answer has a question id that represents the next step that shows up on screen. It is structured as follows : 
 
 	- Id : The question identifier. This is a number that allows us to determine a step.
 	- Question : This is the step label. It contains a text of this portion of the story.
@@ -29,7 +30,7 @@ Few things you need to know :
 	- Image : The path of the Image inside the Unity project. It has to be uploaded under the "Assets/Resources" folder.
 	- Success : A boolean indicating that we won. If this is true, you have to have at least one answer that acts as a got to main menu button.
 	- Failure : A boolean indicating that we died. If this is true, you have to have at least one answer that acts as a Replay button.
-- Assets/Resources/Sprites/Backgrounds : In this folder, you can put an image that you wish to be shown at a certain step. Adding an image to this folder doesn't suffice. You have to follow these steps in order to make them recognized by the engine.
+- **Assets/Resources/Sprites/Backgrounds** : In this folder, you can put an image that you wish to be shown at a certain step. Adding an image to this folder doesn't suffice. You have to follow these steps in order to make them recognized by the engine.
 	- Add your image to this folder.
 	- Open Unity
 	- Select your Image
