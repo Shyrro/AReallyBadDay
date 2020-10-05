@@ -528,6 +528,12 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: keyboard
+    clip: {fileID: 8300000, guid: 46f7e756f5c5c3a4faea78c176152ed1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &309844348
 Transform:
   m_ObjectHideFlags: 0

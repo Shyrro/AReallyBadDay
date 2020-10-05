@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -67,7 +68,8 @@ public class GameManager : MonoBehaviour {
 
     private void FillUITexts() {
         if (!currentTextAlreadyFilled) {
-            QuestionText.text = CurrentQuestion.Question;
+            StopAllCoroutines();
+            StartCoroutine(TypeSentence(CurrentQuestion.Question));
             for (var i = 0; i < CurrentQuestion.Answers.Length; i++) {
                 ButtonTexts[i].text = CurrentQuestion.Answers[i].Label;
                 AnswerButtons[i].gameObject.SetActive(true);
@@ -82,6 +84,15 @@ public class GameManager : MonoBehaviour {
             }
 
             currentTextAlreadyFilled = true;
+        }
+    }
+
+    IEnumerator TypeSentence(string sentence) {
+        QuestionText.text = string.Empty;
+        foreach(char letter in sentence.ToCharArray()){            
+            audioManager.Play("keyboard");
+            QuestionText.text += letter;
+            yield return new WaitForSeconds(.07f);
         }
     }
 }
