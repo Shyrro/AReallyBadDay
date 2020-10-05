@@ -2,10 +2,10 @@
     "Questions": [
         {
             "Id": -1,
-            "Question": "Vous êtes mort...",
+            "Question": "You are dead...",
             "Answers": [
                 {
-                    "Label": "Recommencer",
+                    "Label": "Replay",
                     "NextQuestionId": 0
                 }
             ],
@@ -14,10 +14,10 @@
         },
         {
             "Id": 1000,
-            "Question": "VICTOIRE",
+            "Question": "VICTORY",
             "Answers": [
                 {
-                    "Label": "Rejouer",
+                    "Label": "Go to main menu",
                     "NextQuestionId": 0
                 }
             ],
@@ -26,10 +26,10 @@
         },
         {
             "Id": 0,
-            "Question": "L'aube se lève. Un affreux cauchemar est survenu...",
+            "Question": "The sun is rising. Just had a horrible dream...",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 1
                 }
             ],
@@ -37,18 +37,18 @@
         },
         {
             "Id": 1,
-            "Question": "Le réveil se met à sonner.",
+            "Question": "The alarm starts ringing.",
             "Answers": [
                 {
-                    "Label": "Le réveil ? Encore 5 min...",
+                    "Label": "Alarm ? Just another 5 min...",
                     "NextQuestionId": 15
                 },
                 {
-                    "Label": "Prendre son temps",
+                    "Label": "Take your time",
                     "NextQuestionId": 2
                 },
                 {
-                    "Label": "Se lever directement !",
+                    "Label": "Wake up instantly !",
                     "NextQuestionId": 28
                 }
             ],
@@ -56,18 +56,18 @@
         },
         {
             "Id": 28,
-            "Question": "Je me sens motivé et en forme aujourd'hui !",
+            "Question": "I feel fresh and motivated today !",
             "Answers": [
                 {
-                    "Label": "Prendre son petit dej",
+                    "Label": "Take your breakfast",
                     "NextQuestionId": 36
                 },
                 {
-                    "Label": "Nourrir le chat",
+                    "Label": "Feed the cat",
                     "NextQuestionId": 40
                 },
                 {
-                    "Label": "Aller prendre sa douche",
+                    "Label": "Take a shower",
                     "NextQuestionId": 45
                 }
             ],
@@ -75,40 +75,40 @@
         },
         {
             "Id": 40,
-            "Question": "Viens Roland, je vais remplir ta gamelle !",
+            "Question": "Come Roland, i'll fill up your bowl !",
             "Answers": [
                 {
-                    "Label": "Patée trop calorique pour lui",
+                    "Label": "Pie too caloric for him",
                     "NextQuestionId": 43
                 },
                 {
-                    "Label": "Les fameuses croquettes premier prix",
+                    "Label": "Famous cheapest cat food !",
                     "NextQuestionId": 44
                 },
                 {
-                    "Label": "Les cadavres d'oiseaux qu'il te ramène",
+                    "Label": "The bird he catches will do",
                     "NextQuestionId": 41
                 }
             ],
             "Image": ""
         },
         {
-            "Id": 43,
-            "Question": "Un jour peut-être que j'arriverai à m'en débarasser de cet animal, par mal nutrition. M'enfin.",
+            "Id": 43,            
+            "Question": "Maybe i can get rid of him one day, malnourishing maybe... Anyway.",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 45
                 }
             ],
             "Image": ""
         },
         {
-            "Id": 44,
-            "Question": "J'espère que tu me pardonneras petit chat... Je n'ai rien de mieux à t'offrir.",
+            "Id": 44,            
+            "Question": "Hope you'll forgive me little cat... I have nothing better to give you.",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 45
                 }
             ],
@@ -116,10 +116,10 @@
         },
         {
             "Id": 45,
-            "Question": "Allez, je vais à la douche !",
+            "Question": "Let's go to the shower !",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 46
                 }
             ],
@@ -127,132 +127,132 @@
         },
         {
             "Id": 46,
-            "Question": "Ayé, je suis propre ! Quelle belle journée vraiment !",
+            "Question": "Oy, i'm clean ! What a really nice day !",
             "Answers": [
                 {
-                    "Label": "On a compris...",
+                    "Label": "We get it...",
                     "NextQuestionId": 29
                 }
             ],
             "Image": ""
         },
         {
-            "Id": 41,
-            "Question": "C'était surement une bonne blague à faire à son animal, voire une belle revanche !",
+            "Id": 41,            
+            "Question": "This surely was a good joke, even a great revenge !",
             "Answers": [
                 {
-                    "Label": "Si seulement...",
+                    "Label": "If only...",
                     "NextQuestionId": 42
                 }
             ],
             "Image": ""
         },
         {
-            "Id": 42,
-            "Question": "Si seulement Roland n'était pas un lynx sauvage que tu essayes d'apprivoiser depuis trois jours. Et la blague n'a pas l'air de lui plaire...",
+            "Id": 42,            
+            "Question": "If only roland wasn't a savage lynx that you're trying to tame for three days... He didn't seem to like today's joke",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": -1
                 }
             ],
             "Image": ""
         },
         {
-            "Id": 36,
-            "Question": "Je me prépare un thé et mes tartines. Belle matinée que voici !",
+            "Id": 36,            
+            "Question": "Preparing my tea and my toasts. What a splendid day !",
             "Answers": [
                 {
-                    "Label": "Beurre de cacahuette",
+                    "Label": "Peanut butter",
                     "NextQuestionId": 37
                 },
                 {
-                    "Label": "Confiture de fraises",
+                    "Label": "Strawberry jam",
                     "NextQuestionId": 39
                 },
                 {
-                    "Label": "Juste du beurre",
+                    "Label": "Just butter",
                     "NextQuestionId": 39
                 }
             ],
             "Image": ""
         },
         {
-            "Id": 39,
-            "Question": "Rien ne vaut un classique pour bien démarrer la journée",
+            "Id": 39,            
+            "Question": "Nothing better than a good classic to start the day !",
             "Answers": [
                 {
-                    "Label": "Nourrir le chat",
+                    "Label": "Feed the cat",
                     "NextQuestionId": 40
                 },
                 {
-                    "Label": "Aller prendre sa douche",
+                    "Label": "Take a shower",
                     "NextQuestionId": 45
                 }
             ],
             "Image": ""
         },
         {
-            "Id": 37,
-            "Question": "Un plaisir ce goût si inavouable et interdit que le beurre de cacahuette dès le matin !",
+            "Id": 37,            
+            "Question": "This shameful and forbidden taste of peanut butter is a blast by the morning !",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 38
                 }
             ],
             "Image": ""
         },
         {
-            "Id": 38,
-            "Question": "Si seulement j'avais pensé une minute de plus que j'y étais alergique...",
+            "Id": 38,            
+            "Question": "If only i thought one minute before that i was allergic...",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": -1
                 }
             ],
             "Image": ""
         },
         {
-            "Id": 29,
-            "Question": "Je pars pour le taff, personne sur la route.",
+            "Id": 29,            
+            "Question": "Going to work, nobody on the road.",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 30
                 }
             ],
             "Image": ""
         },
         {
-            "Id": 30,
-            "Question": "Arrivé au boulot, personne dans les locaux.",
+            "Id": 30,            
+            "Question": "Arrived to work. No one there.",
             "Answers": [
                 {
-                    "Label": "P'tit café ?",
+                    "Label": "Little coffee?",
                     "NextQuestionId": 31
                 }
             ],
             "Image": "Sprites/Backgrounds/office"
         },
         {
-            "Id": 31,
-            "Question": "Je démarre la machine a café. Je commence à boire ma tasse.",
+            "Id": 31,            
+            "Question": "Starting the coffee machine. Starting drinking my mug.",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 32
                 }
             ],
             "Image": "Sprites/Backgrounds/coffee"
         },
         {
-            "Id": 32,
-            "Question": "Il n'y a toujours personne dans les locaux. L'heure est pourtant bien avancée. Suis-je le seul motivé ?",
+            "Id": 32,            
+            "Question": "Still nobody in the office? It's late though. Am i the only one motivated here ?",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 33
                 }
             ],
@@ -260,43 +260,43 @@
         },
         {
             "Id": 33,
-            "Question": "J'entends un petit bruit derrière moi.",
+            "Question": "Hearing a small noise behind me.",
             "Answers": [
                 {
-                    "Label": "Se retourner",
+                    "Label": "Turn around",
                     "NextQuestionId": 34
                 }
             ],
             "Image": ""
         },
         {
-            "Id": 34,
-            "Question": "La machine a café génère un bruit soudain et des étincelles ! Je tente de réparer à la va-vite !!",
+            "Id": 34,            
+            "Question": "The coffee machine suddenly does a lot of noise and sparks ! I'm trying to repair it quickly !!",
             "Answers": [
                 {
-                    "Label": "Tu es un héros des bureaux",
+                    "Label": "You're the office hero.",
                     "NextQuestionId": 35
                 }
             ],
             "Image": "Sprites/Backgrounds/coffeeMachineBroken"
         },
         {
-            "Id": 35,
-            "Question": "Sauf que j'ai oublié que je ne sais pas manipuler l'électricité...",
+            "Id": 35,            
+            "Question": "I just forgot that i don't know how to manipulate electricity...",
             "Answers": [
                 {
-                    "Label": "Ah...",
+                    "Label": "Lord...",
                     "NextQuestionId": -1
                 }
             ],
             "Image": ""
         },
         {
-            "Id": 15,
-            "Question": "Allez, je profite un peu et je me lève...",
+            "Id": 15,            
+            "Question": "I'll enjoy a bit then i wake up...",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 16
                 }
             ],
@@ -307,7 +307,7 @@
             "Question": "...",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 17
                 }
             ],
@@ -315,10 +315,10 @@
         },
         {
             "Id": 17,
-            "Question": "Quelle heure il est ?",
+            "Question": "What time is it ?",
             "Answers": [
                 {
-                    "Label": "Presque 9h",
+                    "Label": "Almost nine",
                     "NextQuestionId": 18
                 }
             ],
@@ -326,21 +326,21 @@
         },
         {
             "Id": 18,
-            "Question": "QUOI ???",
+            "Question": "WHATTTTT ???",
             "Answers": [
                 {
-                    "Label": "Oui..",
+                    "Label": "Yes..",
                     "NextQuestionId": 19
                 }
             ],
             "Image": "Sprites/Backgrounds/horloge"
         },
         {
-            "Id": 19,
-            "Question": "J'ai plus le temps ! Je file au taff !!!",
+            "Id": 19,            
+            "Question": "No more time left ! Running to work !!!",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 20
                 }
             ],
@@ -348,10 +348,10 @@
         },
         {
             "Id": 20,
-            "Question": "L'embouteillage est très important ce matin",
+            "Question": "Traffic jam is an horror this morning.",
             "Answers": [
                 {
-                    "Label": "Plus le temps, je fais un détour !",
+                    "Label": "No more time, i'm taking a detour !",
                     "NextQuestionId": 21
                 }
             ],
@@ -359,32 +359,32 @@
         },
         {
             "Id": 21,
-            "Question": "Je passe proche du chantier d'une maison.",
+            "Question": "Going near the construction site of a house.",
             "Answers": [
                 {
-                    "Label": "Plus le temps, je trace !",
+                    "Label": "No more time, accelerating !",
                     "NextQuestionId": 22
                 }
             ],
             "Image": "Sprites/Backgrounds/chantier"
         },
         {
-            "Id": 22,
-            "Question": "J'entends un bruit au dessus de moi. Mais j'ai dit que j'avais plus le temps, je fonce !",
+            "Id": 22,            
+            "Question": "Hearing a noise above me. But i have no time, rushing !",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 23
                 }
             ],
             "Image": "Sprites/Backgrounds/chantier"
         },
         {
-            "Id": 23,
-            "Question": "Un énorme sac de ciment tombe sur la voiture... C'est vraiment pas de chance...",
+            "Id": 23,            
+            "Question": "That's a big bad of cement that hit the car... Really no luck today...",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": -1
                 }
             ],
@@ -392,10 +392,10 @@
         },
         {
             "Id": 2,
-            "Question": "Je sors de la maison, et je prends la route",
+            "Question": "Going out, on my way to work.",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 3
                 }
             ],
@@ -403,14 +403,14 @@
         },
         {
             "Id": 3,
-            "Question": "L'embouteillage ce matin est très important",
+            "Question": "Traffic jam is important this morning.",
             "Answers": [
                 {
-                    "Label": "Rester dans les bouchons",
+                    "Label": "Stay in traffic jam.",
                     "NextQuestionId": 4
                 },
                 {
-                    "Label": "Bifurquer à une sortie, ça peut aller plus vite",
+                    "Label": "Take a detour, might go quicker.",
                     "NextQuestionId": 24
                 }
             ],
@@ -418,10 +418,10 @@
         },
         {
             "Id": 24,
-            "Question": "Je me retrouve dans des rues désertes, aucune trace de l'embouteillage.",
+            "Question": "Finding my self in empty roads, no more traffic jam.",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 25
                 }
             ],
@@ -429,43 +429,43 @@
         },
         {
             "Id": 25,
-            "Question": "Je passe proche du chantier d'une maison. Une vieille maison en plein travaux de rénovation.",
+            "Question": "Driving near the construction site of a house. An old house getting renovated.",
             "Answers": [
                 {
-                    "Label": "Je regarde un peu les travaux en cours.",
+                    "Label": "Looking a bit for the construction.",
                     "NextQuestionId": 26
                 }
             ],
             "Image": ""
         },
         {
-            "Id": 26,
-            "Question": "L'installation en place est quand même incroyable. Les gars bossent avec acharnement. Même s'ils ont l'air un peu mous, je trouve.",
+            "Id": 26,            
+            "Question": "The installation is impressive. Theses guys work relentlessly. Eventhough they're kinda soft i feel.",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 27
                 }
             ],
             "Image": ""
         },
         {
-            "Id": 27,
-            "Question": "Je devrais peut-être partir, ça fait un moment que je suis là, je devrai y aller maintenant ou je v...",
+            "Id": 27,            
+            "Question": "I should go, it's been a while here, i should go now or i...",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 23
                 }
             ],
             "Image": ""
         },
         {
-            "Id": 4,
-            "Question": "J'arrive enfin au travail, mais je suis en retard.",
+            "Id": 4,            
+            "Question": "Finally at work, but i'm late.",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 5
                 }
             ],
@@ -473,10 +473,10 @@
         },
         {
             "Id": 5,
-            "Question": "Le dossier du client Naite est sur mon bureau",
+            "Question": "Naite's file is on my desk",
             "Answers": [
                 {
-                    "Label": "Ne pas s'en occuper, ça attendra",
+                    "Label": "Don't worry about it, it can wait.",
                     "NextQuestionId": 6
                 }
             ],
@@ -484,21 +484,21 @@
         },
         {
             "Id": 6,
-            "Question": "La matinée passe. \"J'ai bien envie d'un café !\"",
+            "Question": "Morning's passing fast. I could use a coffe !",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 7
                 }
             ],
             "Image": "Sprites/Backgrounds/coffee"
         },
         {
-            "Id": 7,
-            "Question": "La photocopieuse semble en panne suite à votre café. Vos collègues sont sur l'affaire.",
+            "Id": 7,            
+            "Question": "The copy machine seems broken after your coffee. Your colleagues are working on it.",
             "Answers": [
                 {
-                    "Label": "Donner des conseils à distance",
+                    "Label": "Stay far and give advice from distance",
                     "NextQuestionId": 8
                 }
             ],
@@ -506,10 +506,10 @@
         },
         {
             "Id": 8,
-            "Question": "Il est temps d'aller manger.",
+            "Question": "It's time to eat.",
             "Answers": [
                 {
-                    "Label": "Rejoindre des amis",
+                    "Label": "Join friends",
                     "NextQuestionId": 9
                 }
             ],
@@ -517,10 +517,10 @@
         },
         {
             "Id": 9,
-            "Question": "De retour au travail. Dans 5min j'ai une réunion de routine, sans grand intérêt...",
+            "Question": "Back to work. In 5 min there's this routine meeting, doesn't really matter...",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 10
                 }
             ],
@@ -528,10 +528,10 @@
         },
         {
             "Id": 10,
-            "Question": "Que faire durant cette réunion ?",
+            "Question": "What to do during the meeting ?",
             "Answers": [
                 {
-                    "Label": "Participer",
+                    "Label": "Participate",
                     "NextQuestionId": 11
                 }
             ],
@@ -539,10 +539,10 @@
         },
         {
             "Id": 11,
-            "Question": "La réunion est finie, je mets en ordre mes affaires avant de partir.",
+            "Question": "Meeting's finished, ordering my files before leaving.",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 12
                 }
             ],
@@ -550,21 +550,21 @@
         },
         {
             "Id": 12,
-            "Question": "Je rentre comment ?",
+            "Question": "How do i go back?",
             "Answers": [
                 {
-                    "Label": "En bus",
+                    "Label": "By bus",
                     "NextQuestionId": 13
                 }
             ],
             "Image": ""
         },
         {
-            "Id": 13,
-            "Question": "J'ai atteinds la station proche de chez moi.",
+            "Id": 13,            
+            "Question": "Arrived to the nearest station from home.",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 47
                 }
             ],
@@ -572,10 +572,10 @@
         },
         {
             "Id": 47,
-            "Question": "Tiens, un coup de téléphone !",
+            "Question": "Oh, a phone call !",
             "Answers": [
                 {
-                    "Label": "Ne pas répondre",
+                    "Label": "Don't answer",
                     "NextQuestionId": 48
                 }
             ],
@@ -583,10 +583,10 @@
         },
         {
             "Id": 48,
-            "Question": "Le numéro m'est inconnu. Etrange.",
+            "Question": "Unknown number. Weird.",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 49
                 }
             ],
@@ -594,10 +594,10 @@
         },
         {
             "Id": 49,
-            "Question": "Je suis arrivé chez moi. Le téléphone sonne à nouveau.",
+            "Question": "Finally home. Phone rings again.",
             "Answers": [
                 {
-                    "Label": "Décrocher",
+                    "Label": "Answer",
                     "NextQuestionId": 50
                 }
             ],
@@ -616,10 +616,10 @@
         },
         {
             "Id": 51,
-            "Question": "\"Au cinquième seulement. La fin peut-être ?\"",
+            "Question": "\"At the fifth only. The end maybe ?\"",
             "Answers": [
                 {
-                    "Label": "Euh... Pardon ?",
+                    "Label": "Huh... I'm sorry ?",
                     "NextQuestionId": 52
                 }
             ],
@@ -630,7 +630,7 @@
             "Question": "Tut... tut... tut...",
             "Answers": [
                 {
-                    "Label": "Ah...",
+                    "Label": "Ha...",
                     "NextQuestionId": 53
                 }
             ],
@@ -638,10 +638,10 @@
         },
         {
             "Id": 53,
-            "Question": "Vraiment bizarre... Bon, je rentre.",
+            "Question": "Really weird... Anyway, heading back.",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 54
                 }
             ],
@@ -649,21 +649,21 @@
         },
         {
             "Id": 54,
-            "Question": "Enfin rentré. Parfois je supporte pas ces journées qui n'en finissent pas.",
+            "Question": "Finally home. Sometimes i just don't stand these days where you can't see the end of it.",
             "Answers": [
                 {
-                    "Label": "Avancer dans l'entrée.",
+                    "Label": "Head to the entry.",
                     "NextQuestionId": 55
                 }
             ],
             "Image": ""
         },
         {
-            "Id": 55,
-            "Question": "Je vais aller me chercher une bière, j'en ai bien besoin je pense.",
+            "Id": 55,            
+            "Question": "Going to fetch a beer, i really need one i think.",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 56
                 }
             ],
@@ -671,10 +671,10 @@
         },
         {
             "Id": 56,
-            "Question": "Le téléphone sonne de nouveau ?",
+            "Question": "Phone rings again ?",
             "Answers": [
                 {
-                    "Label": "Poser le téléphone sur une table",
+                    "Label": "Put the phone on the table.",
                     "NextQuestionId": 57
                 }
             ],
@@ -682,10 +682,10 @@
         },
         {
             "Id": 57,
-            "Question": "Toujours le même téléphone, ça va bien cinq minutes.",
+            "Question": "Still same phone. Starting to piss me off a bit.",
             "Answers": [
                 {
-                    "Label": "Partir",
+                    "Label": "Leave",
                     "NextQuestionId": 58
                 }
             ],
@@ -693,7 +693,7 @@
         },
         {
             "Id": 58,
-            "Question": "Roland ? Tu es là mon grand ?",
+            "Question": "Roland ? You're here my boy ?",
             "Answers": [
                 {
                     "Label": "Miaou",
@@ -703,22 +703,22 @@
             "Image": ""
         },
         {
-            "Id": 59,
-            "Question": "Ah, je vois que tu as tenu le coup aujourd'hui encore ! J'imagine que je m'occupe de toi un peu correctement.",
+            "Id": 59,            
+            "Question": "Oh, i see that you hang in there today again ! I imagine that i take care of u a little bit.",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 60
                 }
             ],
             "Image": ""
         },
         {
-            "Id": 59,
-            "Question": "Aller, on va se reposer devant la télé avant de manger.",
+            "Id": 59,            
+            "Question": "Here, we'll stay in front of the TV before eating.",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 60
                 }
             ],
@@ -726,21 +726,21 @@
         },
         {
             "Id": 60,
-            "Question": "... J'entends un bruit ?...",
+            "Question": "... I'm hearing a noise ?...",
             "Answers": [
                 {
-                    "Label": "Ne pas y prêter attention",
+                    "Label": "Ignore it",
                     "NextQuestionId": 61
                 }
             ],
             "Image": ""
         },
         {
-            "Id": 61,
-            "Question": "Tu as encore ramené un oiseau blessé Roland ? Punaise, tu pourrais les achever !",
+            "Id": 61,            
+            "Question": "You came back with an injured bird again ! Damn, you could kill him at least",
             "Answers": [
                 {
-                    "Label": "Se lever, et aller dans la cuisine",
+                    "Label": "Get up and go to the kitchen",
                     "NextQuestionId": 62
                 }
             ],
@@ -748,10 +748,10 @@
         },
         {
             "Id": 62,
-            "Question": "C'est toujours à moi de les achever",
+            "Question": "I always have to kill'em",
             "Answers": [
                 {
-                    "Label": "Prendre une fourchette",
+                    "Label": "Take a fork",
                     "NextQuestionId": 63
                 }
             ],
@@ -759,7 +759,7 @@
         },
         {
             "Id": 63,
-            "Question": "Tu l'as mis où cette fois ?",
+            "Question": "Where'd you put it this time?",
             "Answers": [
                 {
                     "Label": "...",
@@ -770,10 +770,10 @@
         },
         {
             "Id": 64,
-            "Question": "J'ai compris, je vais chercher",
+            "Question": "Got it, i'll go look for it.",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 65
                 }
             ],
@@ -781,10 +781,10 @@
         },
         {
             "Id": 65,
-            "Question": "Encore un bruit ??",
+            "Question": "A noise again??",
             "Answers": [
                 {
-                    "Label": "Se retourner",
+                    "Label": "Turn around.",
                     "NextQuestionId": 66
                 }
             ],
@@ -792,10 +792,10 @@
         },
         {
             "Id": 66,
-            "Question": "Le téléphone encore ? Mais c'est pas vrai !",
+            "Question": "Phone again ? What the hell now !",
             "Answers": [
                 {
-                    "Label": "Répondre",
+                    "Label": "Answer",
                     "NextQuestionId": 67
                 }
             ],
@@ -803,7 +803,7 @@
         },
         {
             "Id": 67,
-            "Question": "Il va m'entendre celui-là ! ALLO ???",
+            "Question": "Will this guy hear me! HEYYY ???",
             "Answers": [
                 {
                     "Label": "...",
@@ -813,11 +813,11 @@
             "Image": ""
         },
         {
-            "Id": 68,
-            "Question": "Vous commencez à me gonfler sévère là, vous allez arrêter ce petit jeu, ça n'amuse pers...",
+            "Id": 68,            
+            "Question": "You're really starting to piss me off, you'll stop this small little game, i'm not amus...",
             "Answers": [
                 {
-                    "Label": "Tu as respecté les règles",
+                    "Label": "Your followed the rules.",
                     "NextQuestionId": 69
                 }
             ],
@@ -825,10 +825,10 @@
         },
         {
             "Id": 69,
-            "Question": "Les règles, quelles règles ?",
+            "Question": "The rules? What rules ?",
             "Answers": [
                 {
-                    "Label": "Le jeu est terminé",
+                    "Label": "The game is finished.",
                     "NextQuestionId": 70
                 }
             ],
@@ -836,10 +836,10 @@
         },
         {
             "Id": 70,
-            "Question": "Mais de quoi vous parlez ?",
+            "Question": "What are you talking about ?",
             "Answers": [
                 {
-                    "Label": "Merci d'avoir participé",
+                    "Label": "Thanks that you played.",
                     "NextQuestionId": 71
                 }
             ],
@@ -850,7 +850,7 @@
             "Question": "*Clac*... Tut... Tut",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 72
                 }
             ],
@@ -858,7 +858,7 @@
         },
         {
             "Id": 72,
-            "Question": "Les gens sont vraiment barges en ce moment... J'ai du mal à comprendre...",
+            "Question": "Some people are really weird this time a day... Really can't get it...",
             "Answers": [
                 {
                     "Label": "...",
@@ -869,7 +869,7 @@
         },
         {
             "Id": 73,
-            "Question": "Bon Roland, il est où ton piaf ?",
+            "Question": "Well Roland, where's your damn bird ?",
             "Answers": [
                 {
                     "Label": "...",
@@ -883,7 +883,7 @@
             "Question": "...",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 75
                 }
             ],
@@ -891,10 +891,10 @@
         },
         {
             "Id": 75,
-            "Question": "Bon... Je vais le laisser vivre... demain encore.",
+            "Question": "Well... I'll let him live... Tomorrow again.",
             "Answers": [
                 {
-                    "Label": "Suivant",
+                    "Label": "Next",
                     "NextQuestionId": 76
                 }
             ],
@@ -902,7 +902,7 @@
         },
         {
             "Id": 76,
-            "Question": "... ou au moins jusqu'à la prochaine partie ^_^",
+            "Question": "... or at least till the next game. :)",
             "Answers": [
                 {
                     "Label": "Eh eh",
