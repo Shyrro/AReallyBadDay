@@ -1,20 +1,36 @@
-# LudumDare47
+# A Really bad day
 
-https://trello.com/b/E1ulglEm/ludumdare
+This project has been made under 72h for the LudumDare 47. 
+The theme of the jam was : "Stuck in a loop".
 
-Idée du jeu : 
+# Idea
 
+This game, is a textual game. It narrates a story where you have to make multiple choices. 
+If you do a wrong choice or go a wrong path of choices, you'll die and wake up again to do the exact same day. 
+Unless you do the right choices, you'll be stuck in the same day. 
 
-jeu multichoix : 
+The purpose was to lose the player in a lot a choices and not making a wrong choice obvious. A wrong choice can be a wrong path that continues on and on with also multiple choices. Making the player unable to know the wrong choice right away and be "Stuck in a loop" for a long time. 
+Unfortunately, making a good story with that much choices wasn't possible under 72h. 
 
-	- Jeu la meme journée
-	- Parcours doré -> Le but est de commencer sa journée et la finir et en commencer une nouvelle
+But since we liked the idea, 
 
+# Implementation
 
+The core of the game has been made to accept any suggestions of potentiel stories if anyone wants to collaborate. 
 
-- trois niveaux d'importance : 
-	- Parcours doré 
-	- Milestone mauvais ou bon
-	- Hidden : Si on a le temps
+Few things you need to know : 
 
-- Choisir une dizaine de milestones 
+- Questions.json : This file is under Assets/Data and represents the structure of the story. Each "Question" object in the json file represents a step that has answers, each answer has a question id that represents the next step that shows up on screen. It is structured as follows : 
+
+	- Id : The question identifier. This is a number that allows us to determine a step.
+	- Question : This is the step label. It contains a text of this portion of the story.
+	- Answers : This represents the choices that we have to make. Each choice has a label and a "NextQuestionId" that redirects to a "Question" with the specified "Id".
+	- Image : The path of the Image inside the Unity project. It has to be uploaded under the "Assets/Resources" folder.
+	- Success : A boolean indicating that we won. If this is true, you have to have at least one answer that acts as a got to main menu button.
+	- Failure : A boolean indicating that we died. If this is true, you have to have at least one answer that acts as a Replay button.
+- Assets/Resources/Sprites/Backgrounds : In this folder, you can put an image that you wish to be shown at a certain step. Adding an image to this folder doesn't suffice. You have to follow these steps in order to make them recognized by the engine.
+	- Add your image to this folder.
+	- Open Unity
+	- Select your Image
+	- In the Unity Inspector of your Image, change "Texture type" from Default to "Sprite (2D and UI)" 
+	![alt UnityInspector](https://docs.unity3d.com/uploads/SpriteEditorButton.png)
