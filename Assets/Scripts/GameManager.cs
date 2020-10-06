@@ -89,10 +89,9 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator TypeSentence(string sentence) {
         QuestionText.text = string.Empty;
-        foreach(char letter in sentence.ToCharArray()){            
-            audioManager.Play("keyboard");
+        foreach(char letter in sentence.ToCharArray()){                        
             QuestionText.text += letter;
-            yield return new WaitForSeconds(.07f);
+            yield return null;
         }
     }
 }
