@@ -64,7 +64,12 @@
                 },
                 {
                     "Label": "Feed the cat",
-                    "NextQuestionId": 40
+                    "NextQuestionId": 40,
+                    "Required":
+                    {
+                        "Key": "CatIsFed",
+                        "BoolValue": false
+                    }
                 },
                 {
                     "Label": "Take a shower",
@@ -83,7 +88,12 @@
                 },
                 {
                     "Label": "Famous cheapest cat food !",
-                    "NextQuestionId": 44
+                    "NextQuestionId": 28,
+                    "Change":
+                    {
+                        "Key": "CatIsFed",
+                        "BoolValue": true
+                    }
                 },
                 {
                     "Label": "The bird he catches will do",
@@ -183,7 +193,12 @@
             "Answers": [
                 {
                     "Label": "Feed the cat",
-                    "NextQuestionId": 40
+                    "NextQuestionId": 40,
+                    "Required":
+                    {
+                        "Key": "CatIsFed",
+                        "BoolValue": false
+                    }
                 },
                 {
                     "Label": "Take a shower",

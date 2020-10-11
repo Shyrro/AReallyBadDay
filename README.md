@@ -26,7 +26,15 @@ Few things you need to know :
 
 	- Id : The question identifier. This is a number that allows us to determine a step.
 	- Question : This is the step label. It contains a text of this portion of the story.
-	- Answers : This represents the choices that we have to make. Each choice has a label and a "NextQuestionId" that redirects to a "Question" with the specified "Id".
+	- Answers : This represents the choices that we have to make.
+			-Label : The text on the choice
+			-NextQuestionId : the "Id" that redirects to a "Question" of said "Id".
+			-Change : Optional flag activation to affect choices' availability:
+				-Key : The name of the flag.
+				-BoolValue : Turn on/off said flag.
+			-Required : Optional requirement for displaying this choice:
+                -Key : The name of the required flag.
+                -BoolValue : The required condition of the flag.
 	- Image : The path of the Image inside the Unity project. It has to be uploaded under the "Assets/Resources" folder.
 	- Success : A boolean indicating that we won. If this is true, you have to have at least one answer that acts as a got to main menu button.
 	- Failure : A boolean indicating that we died. If this is true, you have to have at least one answer that acts as a Replay button.

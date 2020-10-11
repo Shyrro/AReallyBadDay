@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class GameManager : MonoBehaviour {
     public TextAsset QuestionsFile;
     public TextMeshProUGUI QuestionText;
@@ -16,8 +17,9 @@ public class GameManager : MonoBehaviour {
     public int currentQuestionIndex = 0;
     private bool currentTextAlreadyFilled;
     private AudioManager audioManager;
-
     private Statement CurrentQuestion => AllQuestions.First(x => x.Id == currentQuestionIndex);
+    //A dictionary to store flags as they come
+    private Dictionary<string, bool> flags = new Dictionary<string, bool>();
 
     private void Awake() {
         audioManager = FindObjectOfType<AudioManager>();
@@ -47,17 +49,32 @@ public class GameManager : MonoBehaviour {
             return;
         }
         
-        ChangeQuestion(CurrentQuestion.Answers[answerId].NextQuestionId);
+        ChangeQuestion(CurrentQuestion.Answers[answerId]);
     }
 
     public void Replay() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    private void ChangeQuestion(int goToQuestionId) {
+    private void ChangeQuestion(Answer answer) {
         currentTextAlreadyFilled = false;
         HideButtons();
-        currentQuestionIndex = goToQuestionId;
+        //test for missing key
+        if (answer.Change.Key != null)
+        {
+            string label = answer.Change.Key;
+            bool value = answer.Change.BoolValue;
+            //chek if flag was added to dictionary else add it
+            if (flags.ContainsKey(label))
+            {
+                flags[label] = value;
+            }
+            else
+            {
+                flags.Add(label, value);
+            }
+        }
+        currentQuestionIndex = answer.NextQuestionId;
     }
 
     private void HideButtons(){
@@ -68,15 +85,47 @@ public class GameManager : MonoBehaviour {
 
     private void FillUITexts() {
         if (!currentTextAlreadyFilled) {
+            Statement CurrQuestion = CurrentQuestion;
+            Answer CurrAnswer;
+            Condition CurrCondition;
+            bool activateButton;
             StopAllCoroutines();
-            StartCoroutine(TypeSentence(CurrentQuestion.Question));
-            for (var i = 0; i < CurrentQuestion.Answers.Length; i++) {
-                ButtonTexts[i].text = CurrentQuestion.Answers[i].Label;
-                AnswerButtons[i].gameObject.SetActive(true);
+            StartCoroutine(TypeSentence(CurrQuestion.Question));
+            for (var i = 0; i < CurrQuestion.Answers.Length; i++) {
+                CurrAnswer = CurrQuestion.Answers[i];
+                CurrCondition = CurrAnswer.Required;
+                activateButton = false;
+                // check for mising key
+                if (CurrCondition.Key != null)
+                {
+                    //check if key is present in dictionary
+                    if (flags.ContainsKey(CurrCondition.Key))
+                    {
+                        //check if flag value matches required value
+                        if (flags[CurrCondition.Key] == CurrCondition.BoolValue)
+                        {
+                            activateButton = true;
+                        }
+                    }
+                    else
+                    {
+                        activateButton = true;
+                    }
+                }
+                else
+                {
+                    activateButton = true;
+                }
+
+                if (activateButton)
+                {
+                    ButtonTexts[i].text = CurrAnswer.Label;
+                    AnswerButtons[i].gameObject.SetActive(true);
+                }
             }
 
-            if (!string.IsNullOrWhiteSpace(CurrentQuestion.Image)) {
-                Sprite background = Resources.Load<Sprite>(CurrentQuestion.Image);
+            if (!string.IsNullOrWhiteSpace(CurrQuestion.Image)) {
+                Sprite background = Resources.Load<Sprite>(CurrQuestion.Image);
                 BackgroundImage.sprite = background;
             }else {
                 Sprite background = Resources.Load<Sprite>("Sprites/Backgrounds/black");
