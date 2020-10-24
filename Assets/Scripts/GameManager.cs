@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization.Json;
+using System.Text;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,17 +19,24 @@ public class GameManager : MonoBehaviour {
     public int currentQuestionIndex = 0;
     private bool currentTextAlreadyFilled;
     private AudioManager audioManager;
-
-    private Statement CurrentQuestion => AllQuestions.First(x => x.Id == currentQuestionIndex);
+    private Statement CurrentQuestion => AllQuestions.First(x => x.Id == currentQuestionIndex);    
+    private Dictionary<string, object> flags = new Dictionary<string, object>();    
 
     private void Awake() {
         audioManager = FindObjectOfType<AudioManager>();
         audioManager.Play("AmbianceMusic");
     }
+
     // Start is called before the first frame update
-    void Start() {        
-        Statements fileData = JsonUtility.FromJson<Statements>(QuestionsFile.text);
-        AllQuestions = fileData.Questions;        
+    void Start() {                
+        using(var ms = new MemoryStream(Encoding.UTF8.GetBytes(QuestionsFile.text))) {
+            var ser = new DataContractJsonSerializer(typeof(Statements), new DataContractJsonSerializerSettings{
+                UseSimpleDictionaryFormat = true
+            });
+            Statements fileData = (Statements)ser.ReadObject(ms);
+            AllQuestions = fileData.Questions;        
+        }
+        
         HideButtons();
     }
 
@@ -47,17 +57,32 @@ public class GameManager : MonoBehaviour {
             return;
         }
         
-        ChangeQuestion(CurrentQuestion.Answers[answerId].NextQuestionId);
+        ChangeQuestion(CurrentQuestion.Answers[answerId]);
     }
 
     public void Replay() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    private void ChangeQuestion(int goToQuestionId) {
+    private void ChangeQuestion(Answer answer) {
         currentTextAlreadyFilled = false;
         HideButtons();
-        currentQuestionIndex = goToQuestionId;
+        currentQuestionIndex = answer.NextQuestionId;
+
+        if (answer.Change == null || answer.Change.Count == 0) return;
+
+        foreach(var condition in answer.Change) {            
+            string label = condition.Key;            
+            var value = condition.Value;
+            if (flags.ContainsKey(label))
+            {
+                flags[label] = value;
+            }
+            else
+            {
+                flags.Add(label, value);
+            }    
+        }        
     }
 
     private void HideButtons(){
@@ -71,18 +96,25 @@ public class GameManager : MonoBehaviour {
             StopAllCoroutines();
             StartCoroutine(TypeSentence(CurrentQuestion.Question));
             for (var i = 0; i < CurrentQuestion.Answers.Length; i++) {
-                ButtonTexts[i].text = CurrentQuestion.Answers[i].Label;
-                AnswerButtons[i].gameObject.SetActive(true);
-            }
+                var CurrentAnswer = CurrentQuestion.Answers[i];                                    
+                bool activateButton = true;
+                var RequiredConditions = CurrentAnswer.Required ?? new Dictionary<string, object>();
 
-            if (!string.IsNullOrWhiteSpace(CurrentQuestion.Image)) {
-                Sprite background = Resources.Load<Sprite>(CurrentQuestion.Image);
-                BackgroundImage.sprite = background;
-            }else {
-                Sprite background = Resources.Load<Sprite>("Sprites/Backgrounds/black");
-                BackgroundImage.sprite = background;
-            }
+                foreach(var condition in RequiredConditions) {
+                    flags.TryGetValue(condition.Key, out object conditionValue);  
+                    activateButton = conditionValue.Equals(condition.Value);
+                    if(!activateButton) break;
+                }                     
+                
+                if (activateButton)
+                {
+                    ButtonTexts[i].text = CurrentAnswer.Label;
+                    AnswerButtons[i].gameObject.SetActive(true);
+                }
+            }            
 
+            string imageString = !string.IsNullOrWhiteSpace(CurrentQuestion.Image) ? CurrentQuestion.Image : "Sprites/Backgrounds/black";
+            BackgroundImage.sprite = Resources.Load<Sprite>(imageString);
             currentTextAlreadyFilled = true;
         }
     }

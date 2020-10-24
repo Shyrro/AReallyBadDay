@@ -1,0 +1,23 @@
+Change log.txt
+* File created
+* Describe changes.
+
+Assets/Scripts/GameManager.cs
+* 22		Added global variable flags of type dictionary<string, bool> to hold flags.
+* 52 & 59	Changed the argument of the ChangeQuestion function from int (answer index) to Answer object.
+* 68 - 75	Added flag testing logic and flag modification command.
+* 88 - 91	Added local variables to catch CurrentQuestion and various objects to make code more readable.
+* 99 - 118	Added flag testing logic and button activiation condition.
+
+Assets/Models/Answer.cs
+* 5		Added "Required" variable of type condition to control button activation.
+* 6		Added "Change" variable of type condition to manipulate flags.
+
+Assets/Model/Condition.cs
+* File created
+* Defining new object type that is included inside Answer.cs to implemet flag logic.
+
+Assets/Data/Questions_en.json
+* 68 - 72	Make "Feed the cat" button require flag "CatIsFed" to be false.
+* 92 - 96	Make "Famous cheapest cat food !" button change flag "CatIsFed" to false.
+* 197 - 201	Make "Nothing better than a good classic to start the day !" button change flag "CatIsFed" to false.
