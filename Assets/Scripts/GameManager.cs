@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour {
     private bool currentTextAlreadyFilled;
     private AudioManager audioManager;
     private Statement CurrentQuestion => AllQuestions.First(x => x.Id == currentQuestionIndex);    
-    private Dictionary<string, object> flags = new Dictionary<string, object>();
+    private Dictionary<string, object> flags = new Dictionary<string, object>();    
 
     private void Awake() {
         audioManager = FindObjectOfType<AudioManager>();
@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour {
             else
             {
                 flags.Add(label, value);
-            }
+            }    
         }        
     }
 
@@ -103,17 +103,17 @@ public class GameManager : MonoBehaviour {
                 foreach(var condition in RequiredConditions) {
                     flags.TryGetValue(condition.Key, out object conditionValue);  
                     activateButton = conditionValue.Equals(condition.Value);
-                    if(activateButton) break;
-                }      
-
+                    if(!activateButton) break;
+                }                     
+                
                 if (activateButton)
                 {
                     ButtonTexts[i].text = CurrentAnswer.Label;
-                    AnswerButtons[i].gameObject.SetActive(true);                    
-                }                                                                         
+                    AnswerButtons[i].gameObject.SetActive(true);
+                }
             }            
 
-            string imageString = !string.IsNullOrWhiteSpace(CurrentQuestion.Image) ? CurrentQuestion.Image : "Sprites/Backgrounds/black";          
+            string imageString = !string.IsNullOrWhiteSpace(CurrentQuestion.Image) ? CurrentQuestion.Image : "Sprites/Backgrounds/black";
             BackgroundImage.sprite = Resources.Load<Sprite>(imageString);
             currentTextAlreadyFilled = true;
         }
